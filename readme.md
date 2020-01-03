@@ -1,0 +1,1 @@
+This is a react, apollo, graphQL, express application for visualizing all records of rockets launched into space by spaceX
