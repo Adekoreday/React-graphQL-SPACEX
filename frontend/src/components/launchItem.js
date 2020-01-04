@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const LaunchItem = ({launch: {flight_number, mission_name, launch_year, launch_success}}) => {
     console.log(launch_success, 'this is the launch success for', flight_number);
@@ -21,9 +22,11 @@ const LaunchItem = ({launch: {flight_number, mission_name, launch_year, launch_s
       </div>
 
     <div className="md:w-3/12"></div>
-      <button className="invisible sm:invisible md:visible lg:visible xl:visible bg-gray-700 hover:bg-gray-600 text-white text-sm m-5 h-10 p-4 py-2 rounded">
+             <Link to={`/launch/${flight_number}`} >
+                 <button className="bg-gray-700 hover:bg-gray-600 text-white text-sm m-5 h-10 p-4 py-2 rounded">
                 details
             </button>
+            </Link>
   </div>
     )
 }
